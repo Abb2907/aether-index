@@ -2,10 +2,13 @@
 import reposData from '../data/repos.json';
 import '../styles/global.css';
 
-// The "Brain": Fetches real-time GitHub data at build time
+const categories = ["All", ...new Set(reposData.map(repo => repo.category))];
+
 const repos = await Promise.all(reposData.map(async (repo) => {
   try {
-    const res = await fetch(`https://api.github.com/repos/${repo.id}`);
+    const res = await fetch(`https://api.github.com/repos/${repo.id}`, {
+      headers: import.meta.env.GITHUB_TOKEN ? { Authorization: `token ${import.meta.env.GITHUB_TOKEN}` } : {}
+    });
     const data = await res.json();
     return {
       name: data.name || repo.id.split('/')[1],
@@ -15,13 +18,7 @@ const repos = await Promise.all(reposData.map(async (repo) => {
       category: repo.category
     };
   } catch (e) {
-    return { 
-      name: repo.id, 
-      desc: "Rate limit reached or repo not found", 
-      stars: "—", 
-      url: "#", 
-      category: repo.category 
-    };
+    return { name: repo.id, desc: "Resource temporarily offline", stars: "—", url: "#", category: repo.category };
   }
 }));
 ---
@@ -31,79 +28,143 @@ const repos = await Promise.all(reposData.map(async (repo) => {
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		
 		<title>AetherIndex // Open Source AI Manifest</title>
-		<meta name="title" content="AetherIndex // Open Source AI Manifest" />
-		<meta name="description" content="A hand-curated index of the most influential open-source AI intelligence, featuring real-time GitHub star tracking." />
-
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://aether-index.vercel.app/" />
-		<meta property="og:title" content="AetherIndex // Open Source AI Manifest" />
-		<meta property="og:description" content="Curating the fabric of artificial intelligence. Live repository tracking with a high-tech interface." />
 		<meta property="og:image" content="https://aether-index.vercel.app/og_image.png" />
-
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://aether-index.vercel.app/" />
-		<meta property="twitter:title" content="AetherIndex // Open Source AI Manifest" />
-		<meta property="twitter:description" content="Curating the fabric of artificial intelligence. Live repository tracking with a high-tech interface." />
-		<meta property="twitter:image" content="https://aether-index.vercel.app/og_image.png" />
 	</head>
-	<body class="selection:bg-blue-500/30">
-		<main class="max-w-6xl mx-auto px-6 py-20">
-			
-			<div class="mb-20 border-b border-white/5 pb-12">
-				<h1 class="text-6xl font-black tracking-tighter text-white uppercase italic">
-					Aether<span class="text-blue-500">Index</span>
+	<body class="bg-[#050505] text-white selection:bg-blue-500/30 font-sans">
+		
+		<nav class="border-b border-white/5 bg-black/50 backdrop-blur-md sticky top-0 z-50">
+			<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+				<div class="flex items-center gap-2">
+					<div class="w-6 h-6 bg-blue-600 rounded-sm"></div>
+					<span class="font-bold tracking-tighter uppercase italic text-lg">Aether<span class="text-blue-500">Index</span></span>
+				</div>
+				<div class="hidden md:flex gap-8 text-[10px] font-mono uppercase tracking-widest text-slate-400">
+					<a href="#" class="hover:text-white transition-colors">Manifest</a>
+					<a href="#" class="hover:text-white transition-colors">Resources</a>
+					<a href="#" class="hover:text-white transition-colors">Archive</a>
+				</div>
+				<button class="bg-white text-black text-[10px] font-bold px-4 py-2 uppercase tracking-tight hover:bg-blue-500 hover:text-white transition-all">
+					Join Manifest
+				</button>
+			</div>
+		</nav>
+
+		<header class="py-24 text-center border-b border-white/5 bg-gradient-to-b from-blue-900/10 to-transparent">
+			<div class="max-w-4xl mx-auto px-6">
+				<div class="inline-block px-3 py-1 border border-blue-500/30 rounded-full bg-blue-500/5 text-[9px] font-mono text-blue-400 uppercase tracking-[0.3em] mb-6">
+					System_Version_2.0
+				</div>
+				<h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-none uppercase italic">
+					Aether<span class="text-blue-600">Index</span>
 				</h1>
-				<p class="mt-4 text-slate-500 font-mono text-[10px] uppercase tracking-[0.5em]">
-					Curating the fabric of artificial intelligence
+				<p class="text-xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+					Step-by-step intelligence. Curating the most influential <span class="text-white border-b border-blue-500/50">LLM frameworks</span>, <span class="text-white border-b border-blue-500/50">AI Agents</span>, and Open Source models in one unified manifest.
 				</p>
+				
+				<div class="mt-12 max-w-md mx-auto flex gap-2 p-1.5 bg-white/[0.03] border border-white/10 rounded-lg">
+					<input type="email" placeholder="Enter your email" class="bg-transparent flex-1 px-4 py-2 text-sm outline-none font-mono" />
+					<button class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-md text-xs font-bold uppercase tracking-tight transition-all">Subscribe</button>
+				</div>
+			</div>
+		</header>
+
+		<main class="max-w-7xl mx-auto px-6 py-20">
+			
+			<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+				<div>
+					<h2 class="text-3xl font-bold tracking-tight mb-2">Manifest Archive</h2>
+					<p class="text-slate-500 font-mono text-xs uppercase tracking-widest">Explore the Intelligence Grid</p>
+				</div>
+				<div class="w-full md:w-80">
+					<input 
+						type="text" 
+						id="repo-search" 
+						placeholder="Search manifest..." 
+						class="w-full bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3 text-xs font-mono text-white focus:border-blue-500/50 transition-all outline-none"
+					/>
+				</div>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{repos.map(repo => (
-					<a href={repo.url} target="_blank" class="laser-card p-8 group">
-						<div class="flex justify-between items-start mb-8">
-							<span class="text-[10px] font-mono text-blue-400 border border-blue-400/20 px-2 py-0.5 rounded tracking-widest">
-								{repo.category}
-							</span>
-							<div class="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
-								<span class="text-blue-500">★</span>
-								<span>{repo.stars}</span>
-							</div>
-						</div>
-						
-						<h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors tracking-tight">
-							{repo.name}
-						</h2>
-						
-						<p class="mt-3 text-sm text-slate-400 leading-relaxed line-clamp-2 font-light italic">
-							{repo.desc}
-						</p>
+			<div class="mb-12 flex flex-wrap gap-2">
+				{categories.map(cat => (
+					<button
+						class="filter-btn px-5 py-2 rounded-md border border-white/5 bg-white/[0.02] text-[10px] font-mono uppercase tracking-widest text-slate-500 hover:border-blue-500/50 hover:text-white transition-all"
+						data-category={cat}
+					>
+						{cat}
+					</button>
+				))}
+			</div>
 
-						<div class="mt-10 flex items-center justify-between border-t border-white/5 pt-6">
-							<span class="text-[9px] font-mono text-slate-600 uppercase tracking-widest group-hover:text-slate-400 transition-colors">
-								Initialize_Transfer
-							</span>
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all">
-                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-              </svg>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="repo-grid">
+				{repos.map(repo => (
+					<a href={repo.url} target="_blank" class="laser-card p-8 group block flex flex-col justify-between h-full" data-category={repo.category} data-name={repo.name.toLowerCase()}>
+						<div>
+							<div class="flex justify-between items-start mb-6">
+								<span class="text-[9px] font-mono text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded uppercase tracking-tighter">
+									{repo.category}
+								</span>
+								<div class="text-xs text-slate-600 font-mono">★ {repo.stars}</div>
+							</div>
+							<h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-4">{repo.name}</h3>
+							<p class="text-sm text-slate-400 leading-relaxed font-light italic mb-8">{repo.desc}</p>
+						</div>
+						<div class="pt-6 border-t border-white/5 flex items-center justify-between text-slate-600 group-hover:text-blue-400 transition-colors">
+							<span class="text-[9px] font-mono uppercase tracking-widest">Explore_Source</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
 						</div>
 					</a>
 				))}
 			</div>
-
-      <footer class="mt-24 text-center">
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/5 bg-white/[0.02]">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-          </span>
-          <span class="text-[9px] font-mono text-slate-500 uppercase tracking-[0.2em]">
-            System Status: Verified // Neural_Link_Active
-          </span>
-        </div>
-      </footer>
 		</main>
+
+		<footer class="mt-40 bg-black border-t border-white/5 py-20 px-6">
+			<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+				<div class="max-w-xs text-center md:text-left">
+					<div class="font-bold tracking-tighter uppercase italic text-xl mb-4">Aether<span class="text-blue-500">Index</span></div>
+					<p class="text-xs text-slate-500 leading-relaxed mb-6">Step-by-step tutorials on building LLM apps and AI Agents. Curated for the modern engineering manifest.</p>
+					<p class="text-[10px] text-slate-700 font-mono italic">© 2026 AetherIndex Portal.</p>
+				</div>
+				<div class="flex flex-col items-center md:items-end gap-6">
+					<div class="flex gap-1.5 p-1 bg-white/[0.03] border border-white/10 rounded-lg">
+						<input type="email" placeholder="Enter your email" class="bg-transparent px-4 py-2 text-xs outline-none" />
+						<button class="bg-blue-600 px-6 py-2 rounded text-xs font-bold uppercase transition-all">Subscribe</button>
+					</div>
+					<div class="flex gap-8 text-[9px] font-mono uppercase tracking-widest text-slate-500">
+						<a href="#" class="hover:text-white">Privacy</a>
+						<a href="#" class="hover:text-white">Terms</a>
+						<a href="#" class="hover:text-white">Contact</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const searchInput = document.getElementById('repo-search') as HTMLInputElement;
+			const buttons = document.querySelectorAll('.filter-btn');
+			const cards = document.querySelectorAll('#repo-grid > a') as NodeListOf<HTMLElement>;
+
+			function filter() {
+				const term = searchInput.value.toLowerCase();
+				const activeBtn = document.querySelector('.filter-btn.border-blue-500') as HTMLElement;
+				const activeCat = activeBtn?.getAttribute('data-category') || "All";
+
+				cards.forEach(card => {
+					const name = card.getAttribute('data-name') || "";
+					const cat = card.getAttribute('data-category') || "";
+					const matchesSearch = name.includes(term);
+					const matchesCat = activeCat === "All" || cat === activeCat;
+					card.style.display = matchesSearch && matchesCat ? 'block' : 'none';
+				});
+			}
+
+			searchInput?.addEventListener('input', filter);
+			buttons.forEach(btn => btn.addEventListener('click', () => {
+				buttons.forEach(b => b.classList.remove('border-blue-500', 'text-white', 'bg-blue-500/10'));
+				btn.classList.add('border-blue-500', 'text-white', 'bg-blue-500/10');
+				filter();
+			}));
+		</script>
 	</body>
 </html>
