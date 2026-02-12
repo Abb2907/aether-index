@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Custom High-Tech Design Tokens */
+@layer base {
+  body {
+    background-color: #030712;
+    color: #94a3b8; /* slate-400 */
+    -webkit-font-smoothing: antialiased;
+    /* Subtle deep space glow */
+    background-image: 
+      radial-gradient(circle at 50% -20%, #1e1b4b, transparent),
+      radial-gradient(circle at 0% 100%, #020617, transparent);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .laser-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .laser-card:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 40px -15px rgba(59, 130, 246, 0.3);
+    transform: translateY(-5px);
+  }
+
+  /* The "Scanner" light line that appears on hover */
+  .laser-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .laser-card:hover::after {
+    opacity: 1;
+  }
+}

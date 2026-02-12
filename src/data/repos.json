@@ -1,0 +1,6 @@
+[
+  { "id": "Significant-Gravitas/Auto-GPT", "category": "Agents" },
+  { "id": "langchain-ai/langchain", "category": "Frameworks" },
+  { "id": "ollama/ollama", "category": "Infrastructure" },
+  { "id": "AUTOMATIC1111/stable-diffusion-webui", "category": "Generation" }
+]

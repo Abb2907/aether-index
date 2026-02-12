@@ -1,0 +1,74 @@
+---
+import reposData from '../data/repos.json';
+import '../styles/global.css';
+
+// The "Brain": This fetches real-time data from GitHub during the build
+const repos = await Promise.all(reposData.map(async (repo) => {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo.id}`);
+    const data = await res.json();
+    return {
+      name: data.name || repo.id.split('/')[1],
+      desc: data.description || "A high-performance AI resource.",
+      stars: data.stargazers_count ? (data.stargazers_count / 1000).toFixed(1) + 'k' : '0.0k',
+      url: data.html_url,
+      category: repo.category
+    };
+  } catch (e) {
+    return { name: repo.id, desc: "Rate limit reached or repo not found", stars: "—", url: "#", category: repo.category };
+  }
+}));
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>AI_NEXUS // Curated Intelligence</title>
+	</head>
+	<body class="selection:bg-blue-500/30">
+		<main class="max-w-6xl mx-auto px-6 py-20">
+			
+			<div class="mb-16 border-b border-white/5 pb-10">
+				<h1 class="text-5xl font-black tracking-tighter text-white">
+					AI_NEXUS<span class="text-blue-500">.</span>
+				</h1>
+				<p class="mt-4 text-slate-500 font-mono text-xs uppercase tracking-[0.4em]">
+					Curated Repository Index // v1.0
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{repos.map(repo => (
+					<a href={repo.url} target="_blank" class="laser-card p-8 group">
+						<div class="flex justify-between items-start mb-8">
+							<span class="text-[10px] font-mono text-blue-400 border border-blue-400/20 px-2 py-0.5 rounded">
+								{repo.category}
+							</span>
+							<div class="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
+								<span class="text-blue-500">★</span>
+								<span>{repo.stars}</span>
+							</div>
+						</div>
+						
+						<h2 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+							{repo.name}
+						</h2>
+						
+						<p class="mt-3 text-sm text-slate-400 leading-relaxed line-clamp-2">
+							{repo.desc}
+						</p>
+
+						<div class="mt-10 flex items-center justify-between">
+							<span class="text-[9px] font-mono text-slate-600 uppercase tracking-widest group-hover:text-slate-400 transition-colors">
+								Initialize_Transfer
+							</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 group-hover:text-blue-400 group-hover:translate-x-1 transition-all"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+						</div>
+					</a>
+				))}
+			</div>
+		</main>
+	</body>
+</html>
