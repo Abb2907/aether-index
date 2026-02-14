@@ -1,0 +1,975 @@
+[
+  {
+    "title": "AI Engineering Newsletter",
+    "url": "https://aiengineering.beehiiv.com/",
+    "type": "Newsletter",
+    "category": "Industry / Trends",
+    "desc": "AI engineering updates, tooling, and agent ecosystem news."
+  },
+  {
+    "title": "Learn LLMs in 2026",
+    "url": "https://youtu.be/U07MHi4Suj8",
+    "type": "YouTube",
+    "category": "LLM Foundations",
+    "desc": "Structured roadmap for mastering LLM systems."
+  },
+  {
+    "title": "AI Version of Myself with NotebookLM",
+    "url": "https://www.xda-developers.com/built-ai-version-of-myself-with-notebooklm/",
+    "type": "Article",
+    "category": "Agentic AI",
+    "desc": "Creating personal AI replicas using NotebookLM."
+  },
+  {
+    "title": "Gemini 3 + NotebookLM Workflow",
+    "url": "https://www.youtube.com/watch?v=ia6zWjcXgc4",
+    "type": "YouTube",
+    "category": "Tools & Frameworks",
+    "desc": "Using Gemini and NotebookLM for visual workflows."
+  },
+  {
+    "title": "Building Agents from Scratch",
+    "url": "https://www.philschmid.de/building-agents",
+    "type": "Guide",
+    "category": "Agentic AI",
+    "desc": "End-to-end guide for building AI agents."
+  },
+  {
+    "title": "Deep Agents CLI (LangChain)",
+    "url": "https://docs.langchain.com/oss/python/deepagents/cli/overview",
+    "type": "Documentation",
+    "category": "Agentic AI",
+    "desc": "LangChain’s DeepAgents CLI for structured agent design."
+  },
+  {
+    "title": "8 Hour AI Agents Course",
+    "url": "https://www.youtube.com/watch?v=ftBWgcwvEk4",
+    "type": "YouTube",
+    "category": "Agentic AI",
+    "desc": "Condensed overview of AI agent architectures."
+  },
+  {
+    "title": "Intro to Large Language Models",
+    "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+    "type": "YouTube",
+    "category": "LLM Foundations",
+    "desc": "High-level introduction to LLM concepts."
+  },
+  {
+    "title": "Stanford CS229 Machine Learning",
+    "url": "https://www.youtube.com/watch?v=9vM4p9NN0Ts",
+    "type": "University Lecture",
+    "category": "Machine Learning",
+    "desc": "Core ML algorithms and theory."
+  },
+  {
+    "title": "Agentic AI: Stanford Webinar",
+    "url": "https://www.youtube.com/watch?v=kJLiOGle3Lw",
+    "type": "Webinar",
+    "category": "Agentic AI",
+    "desc": "Progression of language model usage into agents."
+  },
+  {
+    "title": "Building and Evaluating AI Agents",
+    "url": "https://www.youtube.com/watch?v=d5EltXhbcfA",
+    "type": "Talk",
+    "category": "Agentic AI",
+    "desc": "Critical evaluation of agent reliability."
+  },
+  {
+    "title": "Building Effective Agents (Anthropic)",
+    "url": "https://www.anthropic.com/engineering/building-effective-agents",
+    "type": "Engineering Blog",
+    "category": "Agentic AI",
+    "desc": "Best practices for robust agent systems."
+  },
+  {
+    "title": "ReAct Paper",
+    "url": "https://arxiv.org/abs/2210.03629",
+    "type": "Research Paper",
+    "category": "Agentic AI",
+    "desc": "Combining reasoning and acting in LLM agents."
+  },
+  {
+    "title": "Generative Agents",
+    "url": "https://arxiv.org/abs/2304.03442",
+    "type": "Research Paper",
+    "category": "Agentic AI",
+    "desc": "Simulated human-like agents with memory and planning."
+  },
+  {
+    "title": "Toolformer",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/d842425e4bf79ba039352da0f658a906-Paper-Conference.pdf",
+    "type": "Research Paper",
+    "category": "Agentic AI",
+    "desc": "Teaching LLMs to use tools autonomously."
+  },
+  {
+    "title": "Chain of Thought Prompting",
+    "url": "https://arxiv.org/pdf/2201.11903",
+    "type": "Research Paper",
+    "category": "Prompt Engineering",
+    "desc": "Improves reasoning via intermediate steps."
+  },
+  {
+    "title": "Tree of Thoughts",
+    "url": "https://arxiv.org/pdf/2305.10601",
+    "type": "Research Paper",
+    "category": "Prompt Engineering",
+    "desc": "Multi-branch reasoning strategy."
+  },
+  {
+    "title": "Reflexion",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/1b44b878bb782e6954cd888628510e90-Paper-Conference.pdf",
+    "type": "Research Paper",
+    "category": "Agentic AI",
+    "desc": "Self-reflective agent learning."
+  },
+  {
+    "title": "RAG Survey",
+    "url": "https://arxiv.org/pdf/2312.10997",
+    "type": "Research Paper",
+    "category": "RAG",
+    "desc": "Comprehensive overview of retrieval-augmented generation."
+  },
+  {
+    "title": "HuggingFace LLM Course",
+    "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+    "type": "Course",
+    "category": "LLM Foundations",
+    "desc": "From transformers to production LLM deployment."
+  },
+  {
+    "title": "HuggingFace Agents Course",
+    "url": "https://huggingface.co/learn/agents-course/unit0/introduction",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Production-grade AI agent development."
+  },
+  {
+    "title": "Deep RL Course",
+    "url": "https://huggingface.co/learn/deep-rl-course/unit0/introduction",
+    "type": "Course",
+    "category": "RL",
+    "desc": "Train agents through reinforcement learning."
+  },
+  {
+    "title": "FastAI Practical Deep Learning",
+    "url": "https://course.fast.ai/",
+    "type": "Course",
+    "category": "Deep Learning",
+    "desc": "Hands-on PyTorch-based deep learning."
+  },
+  {
+    "title": "Karpathy Zero to Hero",
+    "url": "https://karpathy.ai/zero-to-hero.html",
+    "type": "Course",
+    "category": "Deep Learning",
+    "desc": "Build GPT models from scratch."
+  },
+  {
+    "title": "Probabilistic ML Foundations",
+    "url": "https://probml.github.io/pml-book/book1.html",
+    "type": "Book",
+    "category": "Machine Learning",
+    "desc": "Mathematical foundation of ML."
+  },
+  {
+    "title": "Fairness in ML",
+    "url": "https://fairmlbook.org/",
+    "type": "Book",
+    "category": "Responsible AI",
+    "desc": "Bias detection and responsible AI design."
+  },
+  {
+    "title": "MLOps Short Course",
+    "url": "https://www.deeplearning.ai/short-courses/llmops/",
+    "type": "Course",
+    "category": "MLOps",
+    "desc": "Deployment and monitoring of LLM systems."
+  },
+  {
+    "title": "Production ML Deployment (FastAPI + Docker + AWS)",
+    "url": "https://www.youtube.com/watch?v=-dJPoLm_gtE",
+    "type": "YouTube",
+    "category": "Deployment",
+    "desc": "Deploy ML models into production environments."
+  },
+  {
+    "title": "How We Build Effective Agents — Barry Zhang (Anthropic)",
+    "url": "https://www.youtube.com/watch?v=D7_ipDqhtwk",
+    "type": "YouTube",
+    "category": "Agentic AI",
+    "desc": "Anthropic engineer Barry Zhang on designing effective multi-step agents."
+  },
+  {
+    "title": "Building Agents with Model Context Protocol (MCP) — Full Workshop",
+    "url": "https://www.youtube.com/watch?v=kQmXtrmQ5Zg",
+    "type": "YouTube",
+    "category": "MCP / Agentic AI",
+    "desc": "Full MCP workshop (Mahesh Murag, Anthropic) on model-context for agents."
+  },
+  {
+    "title": "Lets Build An Agent from Scratch",
+    "url": "https://www.youtube.com/watch?si=j75FuDXsIrgVS0RV&v=xzXdLRUyjUg&feature=youtu.be",
+    "type": "YouTube",
+    "category": "Agentic AI",
+    "desc": "Hands-on tutorial building an agent from first principles."
+  },
+  {
+    "title": "DeepAgents (LangChain JS)",
+    "url": "https://docs.langchain.com/oss/javascript/deepagents/overview",
+    "type": "Documentation",
+    "category": "Agentic AI",
+    "desc": "LangChain DeepAgents overview for JavaScript."
+  },
+  {
+    "title": "Voice agent building to attend calls",
+    "url": "https://youtu.be/HGBMr1RQliY?si=CWPPm2xTOO6onWiV",
+    "type": "YouTube",
+    "category": "Voice Agents",
+    "desc": "Demo: a voice agent that can attend and summarize calls."
+  },
+  {
+    "title": "Built a Social Media Team With Just 1 AI Agent",
+    "url": "https://www.youtube.com/watch?v=r2bxV2CHu5U",
+    "type": "YouTube",
+    "category": "Agentic AI",
+    "desc": "Case study automating social media using a single agent."
+  },
+  {
+    "title": "Perplexity Comet Agents to Automate Your Work",
+    "url": "https://www.youtube.com/watch?v=lqAHw6TwLsk",
+    "type": "YouTube",
+    "category": "Tools & Frameworks",
+    "desc": "Using Perplexity Comet agents to automate common tasks."
+  },
+  {
+    "title": "Stunning VFX Ads for FREE | VEO 3 JSON Prompt",
+    "url": "https://www.youtube.com/watch?v=t_RtsLDbfvI",
+    "type": "YouTube",
+    "category": "Creativity / Tools",
+    "desc": "Create VFX-style ads using VEO 3 JSON prompts."
+  },
+  {
+    "title": "Voice Call AI Agent with n8n | Automate Calls & Follow‑Ups",
+    "url": "https://www.youtube.com/watch?v=JinTKY1TJZY",
+    "type": "YouTube",
+    "category": "Automation",
+    "desc": "Build voice-call automations and follow-ups using n8n and AI."
+  },
+  {
+    "title": "How AI Models Work — Cursor",
+    "url": "https://cursor.com/learn/how-ai-models-work",
+    "type": "Article",
+    "category": "LLM Foundations",
+    "desc": "Clear explanation of model internals, training and inference."
+  },
+  {
+    "title": "Perplexity Pro features you can't miss (Short)",
+    "url": "https://www.youtube.com/shorts/cXv2KCN7gFI",
+    "type": "YouTube",
+    "category": "Tools & Tips",
+    "desc": "Short overview of Perplexity Pro features."
+  },
+  {
+    "title": "AI Agents Full Course — Simplilearn (Live)",
+    "url": "https://www.youtube.com/live/uXVLyJJLEKA",
+    "type": "YouTube Live",
+    "category": "Course",
+    "desc": "Full course on AI agents (Simplilearn live session)."
+  },
+  {
+    "title": "Build an Agentic Voice AI Assistant (MarkTechPost)",
+    "url": "https://www.marktechpost.com/2025/11/08/how-to-build-an-agentic-voice-ai-assistant-that-understands-reasons-plans-and-responds-through-autonomous-multi-step-intelligence/",
+    "type": "Article",
+    "category": "Voice Agents",
+    "desc": "Guide to building voice AI assistants that reason, plan and act."
+  },
+  {
+    "title": "Agentic AI Explained — Build & Understand AI Agents",
+    "url": "https://www.youtube.com/watch?v=Jj1-zb38Yfw",
+    "type": "YouTube",
+    "category": "Agentic AI",
+    "desc": "Introductory explainer on agentic AI concepts and design."
+  },
+  {
+    "title": "How I Use LLMs — Andrej Karpathy",
+    "url": "https://www.youtube.com/watch?v=hmtuvNfytjM",
+    "type": "YouTube",
+    "category": "LLM Foundations",
+    "desc": "Karpathy’s practical workflow and tips for LLMs."
+  },
+  {
+    "title": "Building a Self‑Healing Data Pipeline That Fixes Its Own Python Errors",
+    "url": "https://towardsdatascience.com/building-a-self-healing-data-pipeline-that-fixes-its-own-python-errors/",
+    "type": "Article",
+    "category": "MLOps",
+    "desc": "Pattern for pipelines that detect and auto-fix runtime errors."
+  },
+  {
+    "title": "Generative AI Fundamentals — Harvard HKS (Class 1)",
+    "url": "https://generative-ai-course.hks.harvard.edu/1-how-genai-works/class-1",
+    "type": "Course",
+    "category": "Generative AI",
+    "desc": "How generative AI works — foundations and limitations."
+  },
+  {
+    "title": "Prompt Engineering — Harvard HKS (Class 4)",
+    "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-4",
+    "type": "Course",
+    "category": "Prompt Engineering",
+    "desc": "Practical prompting techniques and prompt engineering principles."
+  },
+  {
+    "title": "System Prompts & RAG — Harvard HKS (Class 5)",
+    "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-5",
+    "type": "Course",
+    "category": "RAG / Prompt Engineering",
+    "desc": "System prompts, retrieval-augmented workflows, and use-cases."
+  },
+  {
+    "title": "CS50x 2025 — Artificial Intelligence",
+    "url": "https://cs50.harvard.edu/x/weeks/ai/",
+    "type": "Course",
+    "category": "Education",
+    "desc": "CS50-style AI material: neural nets, LLMs, and projects."
+  },
+  {
+    "title": "CS50 Extension — AI & Prompt Engineering (Week 10)",
+    "url": "https://cs50.harvard.edu/extension/2025/spring/weeks/10/",
+    "type": "Course",
+    "category": "Prompt Engineering",
+    "desc": "Prompt design and evaluation from CS50 extension materials."
+  },
+  {
+    "title": "How GPT-4 Really Works",
+    "url": "https://www.youtube.com/watch?v=vw-KWfKwvTQ",
+    "type": "YouTube",
+    "category": "LLM Foundations",
+    "desc": "Deep dive into GPT-4 internals and capabilities."
+  },
+  {
+    "title": "LLMs and the End of 'Traditional' Programming",
+    "url": "https://www.youtube.com/watch?v=JhCl-GeT4jw",
+    "type": "YouTube",
+    "category": "Programming / Prompting",
+    "desc": "How prompting changes the software development interface."
+  },
+  {
+    "title": "Generative AI & Education (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PL_kRkvxqHjkqjnhAdSdejAkyQf1TnPkNM",
+    "type": "Playlist",
+    "category": "Education",
+    "desc": "Collection exploring how AI reshapes teaching and learning."
+  },
+  {
+    "title": "Teaching with AI — Harvard (HBSP)",
+    "url": "https://www.hbsp.harvard.edu/educator-training/teaching-with-ai",
+    "type": "Guide",
+    "category": "Education",
+    "desc": "Practical resources for educators using AI in classrooms."
+  },
+  {
+    "title": "The Basics of Generative AI — HKSSlate",
+    "url": "https://sites.google.com/g.harvard.edu/hksslate-genai/the-basics-of-generative-ai",
+    "type": "Guide",
+    "category": "Generative AI",
+    "desc": "A concise, low-jargon introduction to generative AI."
+  },
+  {
+    "title": "Prompt Engineering in Vertex AI — Google Skills",
+    "url": "https://www.skills.google/paths/118/course_templates/976",
+    "type": "Course",
+    "category": "Prompt Engineering",
+    "desc": "Write better prompts for Vertex AI and Gemini models."
+  },
+  {
+    "title": "Google Cloud Computing Foundations: Data, ML, and AI",
+    "url": "https://www.skills.google/course_templates/156",
+    "type": "Course",
+    "category": "Cloud / ML",
+    "desc": "Cloud fundamentals for data, ML and AI workloads."
+  },
+  {
+    "title": "Prealgebra (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PL4C9296DF81B9EF13",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Foundational prealgebra lessons for beginners."
+  },
+  {
+    "title": "Algebra (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLGbL7EvScmU7ZqJW4HumYdDYv12Wt3yOk",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Core algebra concepts and worked examples."
+  },
+  {
+    "title": "Precalculus (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLGbL7EvScmU7IhqclQ-nvHtMA2RZjDxbs",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Precalculus topics bridging algebra and calculus."
+  },
+  {
+    "title": "Calculus (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLGbL7EvScmU6rozMmQmlDhteEg7WA35z4",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Differential and integral calculus explained with examples."
+  },
+  {
+    "title": "Linear Algebra (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Vectors, matrices and linear transforms — AI foundations."
+  },
+  {
+    "title": "Geometry (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PL668AB35C6885A036",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Visual and proof-based geometry lessons."
+  },
+  {
+    "title": "Trigonometry (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PL085526F86A268B57",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Angles, identities and trig applications."
+  },
+  {
+    "title": "Statistics (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PL5102DFDC6790F3D0",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Probability, descriptive stats and inference basics."
+  },
+  {
+    "title": "Probability & Statistics (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLl8XY7QVSa4aUyZAtL2Hlf_mx3LaSix9B",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Probability theory and statistical reasoning."
+  },
+  {
+    "title": "Limits (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLDAA5D23D46B21257",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Limit concepts that underpin calculus."
+  },
+  {
+    "title": "Derivatives (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLDE077A2EC488104D",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Rate-of-change and differentiation techniques."
+  },
+  {
+    "title": "Integrals (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLECD6CD1B292B9015",
+    "type": "Playlist",
+    "category": "Education / Math",
+    "desc": "Area-under-curve, accumulation and applications."
+  },
+  {
+    "title": "High-Dimensional Data Analysis — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/data-analysis-life-sciences-4-high-dimensional-data-analysis",
+    "type": "Course",
+    "category": "Statistics / Data Analysis",
+    "desc": "Dimension reduction, factor analysis, and scaling techniques."
+  },
+  {
+    "title": "Statistics and R — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/statistics-and-r",
+    "type": "Course",
+    "category": "Statistics",
+    "desc": "Practical statistics with R for data analysis."
+  },
+  {
+    "title": "Data Science: Machine Learning — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/data-science-building-machine-learning-models",
+    "type": "Course",
+    "category": "Data Science",
+    "desc": "Model training, validation, and real-world ML pipelines."
+  },
+  {
+    "title": "CS50: Introduction to Computer Science — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50-introduction-computer-science",
+    "type": "Course",
+    "category": "Computer Science",
+    "desc": "Foundations of programming, algorithms and problem solving."
+  },
+  {
+    "title": "CS50: Introduction to Programming with Scratch — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-introduction-programming-scratch",
+    "type": "Course",
+    "category": "Education",
+    "desc": "Beginner-friendly introduction to programming concepts."
+  },
+  {
+    "title": "CS50: Computer Science for Business Professionals — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-computer-science-business-professionals",
+    "type": "Course",
+    "category": "Business / Tech",
+    "desc": "CS fundamentals tailored for business professionals."
+  },
+  {
+    "title": "CS50s: Understanding Technology — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-understanding-technology",
+    "type": "Course",
+    "category": "Foundations",
+    "desc": "Overview of internet, cybersecurity and multimedia."
+  },
+  {
+    "title": "CS50s: Introduction to AI with Python — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python/2023-05",
+    "type": "Course",
+    "category": "AI",
+    "desc": "Intro to AI algorithms and Python implementations."
+  },
+  {
+    "title": "CS50s: Introduction to Programming in Python — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-introduction-programming-python/2023-05",
+    "type": "Course",
+    "category": "Programming",
+    "desc": "Core Python programming concepts and exercises."
+  },
+  {
+    "title": "CS50s: Web Programming — Harvard (pll)",
+    "url": "https://pll.harvard.edu/course/cs50s-web-programming-python-and-javascript/2023-05",
+    "type": "Course",
+    "category": "Web Development",
+    "desc": "Build full-stack projects with Python, JS and SQL."
+  },
+  {
+    "title": "Philo Agents (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLacQJwuclt_sV-tfZmpT1Ov6jldHl30NR",
+    "type": "Playlist",
+    "category": "Agentic AI",
+    "desc": "Playlist covering philosophical and technical agent topics."
+  },
+  {
+    "title": "Understanding Deep Learning (UDL Book)",
+    "url": "https://udlbook.github.io/udlbook/",
+    "type": "Book",
+    "category": "Deep Learning",
+    "desc": "Open-access book explaining deep learning concepts and practice."
+  },
+  {
+    "title": "Google's Agent Whitepaper (Kaggle)",
+    "url": "https://www.kaggle.com/whitepaper-agents",
+    "type": "Whitepaper",
+    "category": "Agentic AI",
+    "desc": "Google’s agent whitepaper resources hosted on Kaggle."
+  },
+  {
+    "title": "Agent Companion Whitepaper (Kaggle)",
+    "url": "https://www.kaggle.com/whitepaper-agent-companion",
+    "type": "Whitepaper",
+    "category": "Agentic AI",
+    "desc": "Companion materials and dataset references for agent research."
+  },
+  {
+    "title": "Claude Code — Documentation",
+    "url": "https://code.claude.com/docs",
+    "type": "Documentation",
+    "category": "Tools & Frameworks",
+    "desc": "Best practices and docs for agentic coding with Claude Code."
+  },
+  {
+    "title": "A Practical Guide to Building Agents — OpenAI (PDF)",
+    "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+    "type": "Guide",
+    "category": "Agentic AI",
+    "desc": "OpenAI’s practical guide and patterns for building agents."
+  },
+  {
+    "title": "MCP with Anthropic — deeplearning.ai short course",
+    "url": "https://www.deeplearning.ai/short-courses/mcp-build-rich-context-ai-apps-with-anthropic/",
+    "type": "Course",
+    "category": "MCP / Agentic AI",
+    "desc": "Short course on using MCP to build rich-context AI apps."
+  },
+  {
+    "title": "Building Applications: Vector Databases with Pinecone (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/building-applications-vector-databases/",
+    "type": "Course",
+    "category": "Vector DBs",
+    "desc": "Using Pinecone and vector DBs to power retrieval apps."
+  },
+  {
+    "title": "Vector Databases — Embeddings to Apps (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/vector-databases-embeddings-applications/",
+    "type": "Course",
+    "category": "Vector DBs",
+    "desc": "From embeddings to production vector-database applications."
+  },
+  {
+    "title": "LLMs as Operating Systems — Agent Memory (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/llms-as-operating-systems-agent-memory/",
+    "type": "Course",
+    "category": "Agent Memory",
+    "desc": "Design patterns for memory in agent systems."
+  },
+  {
+    "title": "Building & Evaluating Advanced RAG (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/",
+    "type": "Course",
+    "category": "RAG",
+    "desc": "Advanced retrieval-augmented generation system design."
+  },
+  {
+    "title": "Building AI Browser Agents (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/building-ai-browser-agents/",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Create browser-based agents that perform web tasks."
+  },
+  {
+    "title": "Evaluating AI Agents (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/evaluating-ai-agents/",
+    "type": "Course",
+    "category": "Evaluation",
+    "desc": "Methods and metrics for testing and validating agents."
+  },
+  {
+    "title": "Computer Use with Anthropic — deeplearning.ai short course",
+    "url": "https://www.deeplearning.ai/short-courses/building-towards-computer-use-with-anthropic/",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Enabling AI systems to perform structured computer tasks."
+  },
+  {
+    "title": "Practical Multi-AI Agents & Advanced Use Cases (CrewAI)",
+    "url": "https://www.deeplearning.ai/short-courses/practical-multi-ai-agents-and-advanced-use-cases-with-crewai/",
+    "type": "Course",
+    "category": "Multi-Agent",
+    "desc": "Designing and coordinating multiple AI agents in production."
+  },
+  {
+    "title": "Improving Accuracy of LLM Applications (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/improving-accuracy-of-llm-applications/",
+    "type": "Course",
+    "category": "LLM Ops",
+    "desc": "Practical techniques to increase LLM reliability and accuracy."
+  },
+  {
+    "title": "AI Agentic Design Patterns with Autogen (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/",
+    "type": "Course",
+    "category": "Agent Design",
+    "desc": "Design patterns for agent orchestration using Autogen."
+  },
+  {
+    "title": "Multi-AI Agent Systems with Crewai (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/",
+    "type": "Course",
+    "category": "Multi-Agent",
+    "desc": "Architecting and training systems of cooperating agents."
+  },
+  {
+    "title": "ChatGPT — Prompt Engineering for Developers (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/",
+    "type": "Course",
+    "category": "Prompt Engineering",
+    "desc": "Practical prompt engineering techniques for developers."
+  },
+  {
+    "title": "Vibe Coding 101 — Code with AI Assistance (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/",
+    "type": "Course",
+    "category": "Productivity / Tools",
+    "desc": "Coding with AI assistance using Replit."
+  },
+  {
+    "title": "Claude Code — In Action (Skilljar)",
+    "url": "https://anthropic.skilljar.com/claude-code-in-action",
+    "type": "Course",
+    "category": "Tools & Frameworks",
+    "desc": "Hands-on examples of using Claude Code for agentic coding."
+  },
+  {
+    "title": "Claude Code — Highly Agentic Coding Assistant (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/claude-code-a-highly-agentic-coding-assistant/",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Course on using Claude Code as an agentic coding assistant."
+  },
+  {
+    "title": "Collaborative Writing & Coding with OpenAI Canvas (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/collaborative-writing-and-coding-with-openai-canvas/",
+    "type": "Course",
+    "category": "Productivity",
+    "desc": "Use OpenAI Canvas to collaborate with AI on writing and code."
+  },
+  {
+    "title": "Jam with AI — The Mother of AI Project (Substack)",
+    "url": "https://jamwithai.substack.com/p/the-mother-of-ai-project",
+    "type": "Article",
+    "category": "Newsletter / Projects",
+    "desc": "Project write-up and creative directions from Jam with AI."
+  },
+  {
+    "title": "The Prompt Lifecycle — NeoSage (Blog)",
+    "url": "https://blog.neosage.io/p/the-prompt-lifecycle-every-ai-engineer",
+    "type": "Article",
+    "category": "Prompt Engineering",
+    "desc": "Lifecycle approach to prompt design for production systems."
+  },
+  {
+    "title": "RL Continual Learning — Cameron Wolfe (Substack)",
+    "url": "https://cameronrwolfe.substack.com/p/rl-continual-learning",
+    "type": "Article",
+    "category": "Reinforcement Learning",
+    "desc": "Notes and experiments on continual RL techniques."
+  },
+  {
+    "title": "Google Cloud — Machine Learning & AI Training",
+    "url": "https://cloud.google.com/learn/training/machinelearning-ai",
+    "type": "Training",
+    "category": "Cloud / ML",
+    "desc": "Google Cloud training paths for ML and AI services."
+  },
+  {
+    "title": "The Linux Foundation — Data & AI Fundamentals (edX)",
+    "url": "https://www.edx.org/learn/artificial-intelligence/the-linux-foundation-data-and-ai-fundamentals",
+    "type": "Course",
+    "category": "Foundations",
+    "desc": "Compare AI technologies and real-world use cases."
+  },
+  {
+    "title": "Generative AI Learning Plan for Decision Makers (AWS)",
+    "url": "https://skillbuilder.aws/learning-plan/STDH6NGPH7/generative-ai-learning-plan-for-decision-makers/MHMHDAWQJY",
+    "type": "Learning Path",
+    "category": "Business / AI",
+    "desc": "AWS learning plan for decision-makers on generative AI."
+  },
+  {
+    "title": "NVIDIA — Generative AI Explained",
+    "url": "https://learn.nvidia.com/courses/course-detail?course_id=course-v1:DLI+S-FX-07+V1",
+    "type": "Course",
+    "category": "Foundations",
+    "desc": "Beginner-friendly course on generative AI concepts."
+  },
+  {
+    "title": "Salesforce — Build AI Agents with Agentforce",
+    "url": "https://www.salesforce.com/agentforce/ai-agent-course/",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Hands-on agent building on Salesforce Agentforce."
+  },
+  {
+    "title": "Oracle — OCI AI Foundations Associate (Learning Path)",
+    "url": "https://mylearn.oracle.com/ou/learning-path/become-a-oci-ai-foundations-associate-2025/147781",
+    "type": "Learning Path",
+    "category": "Cloud / AI",
+    "desc": "Free training and certification track for OCI AI foundations."
+  },
+  {
+    "title": "IBM — Build Your First GenAI Application (Cognitive Class)",
+    "url": "https://cognitiveclass.ai/courses/build-your-first-genai-application-the-right-way",
+    "type": "Course",
+    "category": "GenAI",
+    "desc": "Hands-on GenAI app building using WatsonX and LangChain."
+  },
+  {
+    "title": "Stanford 2025 Computer Vision Lectures (Playlist)",
+    "url": "https://www.youtube.com/playlist?list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16",
+    "type": "Playlist",
+    "category": "Computer Vision",
+    "desc": "Stanford’s 2025 CV lecture series."
+  },
+  {
+    "title": "Foundations of Machine Learning — Mohri (book site)",
+    "url": "https://cs.nyu.edu/~mohri/mlbook/",
+    "type": "Book",
+    "category": "Machine Learning",
+    "desc": "Foundational textbook for machine learning theory."
+  },
+  {
+    "title": "Algorithms for ML (algorithmsbook.com)",
+    "url": "https://algorithmsbook.com/",
+    "type": "Resource",
+    "category": "Algorithms",
+    "desc": "Practical algorithmic explanations for ML tasks."
+  },
+  {
+    "title": "Deep Learning (Goodfellow et al.)",
+    "url": "https://www.deeplearningbook.org/",
+    "type": "Book",
+    "category": "Deep Learning",
+    "desc": "The canonical deep learning textbook."
+  },
+  {
+    "title": "Reinforcement Learning Basics — Sutton & Barto (PDF)",
+    "url": "https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf",
+    "type": "Book",
+    "category": "Reinforcement Learning",
+    "desc": "Classic RL textbook covering foundational algorithms."
+  },
+  {
+    "title": "Distributional Reinforcement Learning (PDF)",
+    "url": "https://watermark02.silverchair.com/book_9780262374026.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAywwggMoBgkqhkiG9w0BBwagggMZMIIDFQIBADCCAw4GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMiCFwg4isvlV9WV-1AgEQgIIC3-5Yrea4AsYtD_uGoITzRwPq_UcIgEBPeQmtueIBwJWLaYwIoaO3WGs6aV3xjEGeN1q5auUA1-fI_OVY0fL2viIqdQHnIMh7SVr9amUlkuod7Yt6PAZw4iZp-2tbxeHZccpAItzoyczpR3GwlllMC5NTzF5gB_zWD9zafPHB4KobjWidlwoFAU5k8rlUKlcN45hU_Hn0dq5D2jlhNnO0ddyyPvzmq1uGk5bnLJPBudCIQ1B7RFFp-UKMW-AzzxL4IhA3gXzNdiHEDNQZHkpjpByTNlE22QS734if7laazwAVrAyVcL5kdciKn6dVpCSuwanncUrXokrXL_Y_tRw5cLUgWRqCDig2MqiwwmJX5wnRDZi6VERTHiqT-4G8lD8GxLqldTJTEWE2evKQOVAjXPwlBxIvL5QOe2mUFSm3DEGb8Ux88YIIpPux0Fu2GCdb0K5bnNuXfwDCEwbaNSYdc0_HW9UwTXI6Hy4_PVOe3BbfD-9qWOkGdUDtpH1XueGwQUYGhOTCV0lSxsBUP2YjppDoL-LAkMqzmS0BkvNg0_AZDjybn5bCUFfwg6KKWf7uaaibHPcVnlgtPWj3HJW-gj-1JpwKW-5oY7s6WC4Fl1gS4KMvtF_wJioAi58SFX2Ag3098rjdb2hc7IPfBK_aX6MIC-fvEEJu4TI4UfmJtvBeCXuWnflKt9AdIbaHL9ce6lSBLuHJ_KQFzHBGb22x8aCDwiaN7TASKUSUNk54fMmialk0gJtseBWjpW_LbcBU-gaOu02OACO-Hfwe9sYDNni_hlkAfvTu-pkOSORjtVMw9TPtZraZLqwI2E07UPG2beC0u37-1cOUBz7s0y6y5lpuFPF8orQg8mC59Su2b8UhNcGKh-b4Mht5DVzdRGezZVRdAeWPc3AnNLAi_tejw7fKia77etooli0EzN-NwSCnpyYfyytgbFbm_mQyvzobd0BWcdLgfFBgKtcSqgw6zA",
+    "type": "Book / PDF",
+    "category": "Reinforcement Learning",
+    "desc": "Advanced material on distributional approaches in RL."
+  },
+  {
+    "title": "Multi-Agent Reinforcement Learning — MARL Book",
+    "url": "https://marl-book.com/",
+    "type": "Book",
+    "category": "Multi-Agent / RL",
+    "desc": "Concepts and algorithms for multi-agent RL."
+  },
+  {
+    "title": "Advanced RL (PDF)",
+    "url": "https://watermark02.silverchair.com/book_9780262380355.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAywwggMoBgkqhkiG9w0BBwagggMZMIIDFQIBADCCAw4GCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMvJaOm_Db2T3lWAkvAgEQgIIC3_dLFmtzjt2BzFAScxDR8TOyr9D7RFNaoMvd-9obfMpSqM7XC1r_L_zmb_Vgxxb6gR122NRsEZXHp_UwmP_fstyN67678uBe5u6z6nmU_DrN_9Lh-0pqpnq2xHbTvhotpd_UbVvL_0hAdhV3l5luQhK8iRlammqAxnlQeVkEqR7pOTdpdSHufEyJELe_7gBjOV7o_Htd5GT5qswBKvxPhhuuwn3I8Mp314Lq8Mjuv-gwCk1Rw5nYuaAlQ_HWiUSJHpJBxWsDsKCY5TCcWfXM0xxVONK4_qurWk0ruwPNWJDZUQFrqpJUN8evUWIBtdTjgXLLcSmgklOXZeQOTwfFd8KiTTAGHCIw4heg3enqgk8HHS1FxummtZjVK87uyScy1eLQwT14wXGvQcnZiNum7LlPqmaUiF0JWqW-S5uhJ_UHD1qycebHlkyrr5-J8vhwYAIpyig4RgLD7ZXvwJw_GQdIwpmy-oTC7dEC0_rXOT1iYpdSiE2oCvsZidZao6jm3QxhTPrAXb-H-GmBq9g8h0GEkLLw9Jyr1YY7x6cmxVr5y8Duet9_9TlH1YaVny13_sKmqJQFPuP-2PQgs83LqYhRlDwJ1PLBljPnkkv7vp1RaZdVzxjHBgN_R57ftvbziQcmE_sW8GhI760f0XvF_yOrdeLXOh18kBOE77H81mc8QHRAT3Vtpj62sDlkStF8idzesj8_oFS0jUv9tEW2rjzUUlYUMzMY-REmF8mxJ4yMYv0p--5G-tejtcgoXQCY5oOGQhRcSEAsX_w4o7Amahg5rlaXIslg57BV7qIhcVXZrLeVuo1sXZzLJVcXKvcmck_MVnWqRzqef4f2sOkVKd5INXtPSToSY1jJx1X3I52Sd9Ghh-GBu3FfvrfLyyg_T_VMr9PHHdl6RxaPsRC557PTnTTVWw7jhbt80mdJjFaGQiIp0KS-rNjobGvlY5CDaBCSXcoKJSBDMQT-2iGw",
+    "type": "Book / PDF",
+    "category": "Reinforcement Learning",
+    "desc": "Advanced reinforcement learning chapters and references."
+  },
+  {
+    "title": "Probabilistic ML — Advanced (book 2)",
+    "url": "https://probml.github.io/pml-book/book2.html",
+    "type": "Book",
+    "category": "Machine Learning",
+    "desc": "Advanced probabilistic machine learning topics."
+  },
+  {
+    "title": "Stanford CS229 — Machine Learning (additional lectures)",
+    "url": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+    "type": "YouTube",
+    "category": "Machine Learning",
+    "desc": "Additional CS229 lecture content and deep dives."
+  },
+  {
+    "title": "All Machine Learning Concepts Explained in 22 Minutes",
+    "url": "https://www.youtube.com/watch?si=DAmnoQOzJfxxDn1J&v=Fa_V9fP2tpU&feature=youtu.be",
+    "type": "YouTube",
+    "category": "Learning",
+    "desc": "Fast, structured overview of major ML concepts."
+  },
+  {
+    "title": "Steal My Machine Learning Project Template",
+    "url": "https://www.youtube.com/watch?v=glLO8cnwj6s",
+    "type": "YouTube",
+    "category": "ML Projects",
+    "desc": "Template and structure for repeatable ML projects."
+  },
+  {
+    "title": "End-to-End ML Projects Implementation",
+    "url": "https://www.youtube.com/watch?v=MJ1vWb1rGwM",
+    "type": "YouTube",
+    "category": "ML Projects",
+    "desc": "Full project walkthrough from data to deployment."
+  },
+  {
+    "title": "MLOps Pipeline Tutorial (YouTube Viewer Sentiment)",
+    "url": "https://www.youtube.com/watch?v=gwNPV882tkc",
+    "type": "YouTube",
+    "category": "MLOps",
+    "desc": "Build and monitor ML pipelines with real data."
+  },
+  {
+    "title": "You Will NOT Learn ML in 3 Months",
+    "url": "https://www.youtube.com/watch?v=qNxrPri1V0I",
+    "type": "YouTube",
+    "category": "Career Advice",
+    "desc": "Reality check on timelines and how to learn ML effectively."
+  },
+  {
+    "title": "End-to-End Regression ML Project",
+    "url": "https://www.youtube.com/watch?v=Y0SbCp4fUvA",
+    "type": "YouTube",
+    "category": "ML Projects",
+    "desc": "Practical regression project with evaluation and trade-offs."
+  },
+  {
+    "title": "Every Machine Learning Model Explained",
+    "url": "https://www.youtube.com/watch?v=E0Hmnixke2g",
+    "type": "YouTube",
+    "category": "ML Fundamentals",
+    "desc": "Clear overview of common ML model families and when to use them."
+  },
+  {
+    "title": "Production-Grade ML Project Tutorial",
+    "url": "https://www.youtube.com/watch?v=2BvLAJwvfgo",
+    "type": "YouTube",
+    "category": "ML Engineering",
+    "desc": "Guidance on building maintainable, production ML systems."
+  },
+  {
+    "title": "Introduction to Machine Learning (Foundations)",
+    "url": "https://www.youtube.com/watch?v=EUD07IiviJg",
+    "type": "YouTube",
+    "category": "ML Foundations",
+    "desc": "Beginner-friendly introduction to ML concepts."
+  },
+  {
+    "title": "424‑page Free Book on Agentic Design Patterns (Google Doc)",
+    "url": "https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/preview?tab=t.0#heading=h.pxcur8v2qagu",
+    "type": "Resource",
+    "category": "Agent Design",
+    "desc": "Comprehensive guide to agentic design patterns (PDF/Doc)."
+  },
+  {
+    "title": "Vibe Coding 101 With Replit — deeplearning.ai",
+    "url": "https://www.deeplearning.ai/short-courses/vibe-coding-101-with-replit/",
+    "type": "Course",
+    "category": "Productivity",
+    "desc": "Coding with AI helpers and automation in Replit."
+  },
+  {
+    "title": "Anthropic — Claude Code In Action (Skilljar)",
+    "url": "https://anthropic.skilljar.com/claude-code-in-action",
+    "type": "Course",
+    "category": "Agentic AI",
+    "desc": "Practical examples of using Claude Code for agents."
+  },
+  {
+    "title": "Collaborative Writing & Coding with OpenAI Canvas (deeplearning.ai)",
+    "url": "https://www.deeplearning.ai/short-courses/collaborative-writing-and-coding-with-openai-canvas/",
+    "type": "Course",
+    "category": "Productivity",
+    "desc": "Workflows for collaborative AI-assisted writing and coding."
+  },
+  {
+    "title": "AI Agentic Design Patterns — OpenAI / Related Resources",
+    "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf",
+    "type": "Guide",
+    "category": "Agentic AI",
+    "desc": "Practical patterns and examples for building agents."
+  },
+  {
+    "title": "Jam with AI — Substack",
+    "url": "https://jamwithai.substack.com/p/the-mother-of-ai-project",
+    "type": "Newsletter",
+    "category": "Projects",
+    "desc": "Project notes and tutorials from the Jam with AI team."
+  },
+  {
+    "title": "NeoSage — The Prompt Lifecycle",
+    "url": "https://blog.neosage.io/p/the-prompt-lifecycle-every-ai-engineer",
+    "type": "Article",
+    "category": "Prompt Engineering",
+    "desc": "Operational lifecycle approach to prompt development."
+  },
+  {
+    "title": "RL Continual Learning (blog)",
+    "url": "https://cameronrwolfe.substack.com/p/rl-continual-learning",
+    "type": "Article",
+    "category": "Reinforcement Learning",
+    "desc": "Continual RL experiments and practical notes."
+  },
+  {
+    "title": "Cloud Google — ML & AI Learning Path",
+    "url": "https://cloud.google.com/learn/training/machinelearning-ai",
+    "type": "Training",
+    "category": "Cloud / ML",
+    "desc": "Google Cloud training for machine learning practitioners."
+  }
+]
