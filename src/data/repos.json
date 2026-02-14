@@ -1,69 +1,371 @@
 [
-  { "id": "microsoft/generative-ai-for-beginners", "category": "Foundations", "starter": true },
-  { "id": "microsoft/ai-agents-for-beginners", "category": "Agentic Architecture", "starter": true },
-  { "id": "Microsoft/AI-For-Beginners", "category": "Foundations", "starter": true },
-  { "id": "microsoft/ML-For-Beginners", "category": "Foundations", "starter": true },
-  { "id": "dair-ai/Prompt-Engineering-Guide", "category": "Foundations", "starter": true },
-  { "id": "dair-ai/Mathematics-for-ML", "category": "Math", "starter": true },
-  { "id": "mlabonne/llm-course", "category": "Foundations", "starter": true },
-  { "id": "Asabeneh/30-Days-Of-Python", "category": "Foundations", "starter": true },
-  { "id": "Shubhamsaboo/awesome-llm-apps", "category": "Projects", "starter": true },
-  { "id": "vchandu111/15-ai-projects", "category": "Projects", "starter": true },
-  { "id": "kamranahmedse/developer-roadmap", "category": "Roadmaps", "starter": true },
-  { "id": "Sumanth077/Hands-On-AI-Engineering", "category": "Foundations", "starter": true },
-  { "id": "NirDiamant/GenAI_Agents", "category": "Agentic Architecture", "starter": true },
-  { "id": "HeyNina101/generative_ai_project", "category": "Foundations", "customDesc": "A production-ready template to kickstart your Generative AI projects with structure and scalability in mind." },
-  { "id": "ishandutta0098/orion", "category": "Agentic Architecture", "customDesc": "A smart multi-agent system to turn prompts into GitHub PRs." },
-  { "id": "jlowin/fastmcp", "category": "Infrastructure", "customDesc": "The fast, Pythonic way to build MCP servers and clients." },
-  { "id": "OpenBMB/ChatDev", "category": "Agentic Architecture", "customDesc": "Dev All through LLM-powered Multi-Agent Collaboration." },
-  { "id": "ruc-datalab/DeepAnalyze", "category": "Agentic Architecture", "customDesc": "The first agentic LLM for autonomous data science." },
-  { "id": "HKUDS/RAG-Anything", "category": "Architecture", "customDesc": "All-in-one Multimodal Document Processing RAG system built on LightRAG." },
-  { "id": "tadata-org/fastapi_mcp", "category": "Infrastructure", "customDesc": "Expose secure FastAPI endpoints as MCP tools with minimal setup and authentication." },
-  { "id": "instavm/coderunner", "category": "Infrastructure", "customDesc": "Turns LLMs into an instant execution partner that writes and runs code in a preconfigured sandbox." },
-  { "id": "firecrawl/open-agent-builder", "category": "Agentic Architecture", "customDesc": "Visual workflow builder for AI agents powered by Firecrawl." },
-  { "id": "microsoft/agent-lightning", "category": "Agentic Architecture", "customDesc": "The absolute trainer to light up AI agents." },
-  { "id": "GoogleCloudPlatform/agent-starter-pack", "category": "Foundations", "customDesc": "Ship AI Agents to Google Cloud in minutes with built-in CI/CD and observability." },
-  { "id": "oraios/serena", "category": "Infrastructure", "customDesc": "Semantic code editing and retrieval for agent-driven coding." },
-  { "id": "steipete/Peekaboo", "category": "Infrastructure", "customDesc": "Swift code analysis that turns screen content into actionable AI context." },
-  { "id": "upstash/context7", "category": "Infrastructure", "customDesc": "Pulls up-to-date, version-specific documentation straight from your code." },
-  { "id": "ollama/ollama", "category": "Infrastructure" },
-  { "id": "langgenius/dify", "category": "Infrastructure" },
-  { "id": "NirDiamant/RAG_Techniques", "category": "Architecture" },
-  { "id": "donnemartin/system-design-primer", "category": "Engineering" },
-  { "id": "chiphuyen/dmls-book", "category": "MLOps" },
-  { "id": "GokuMohandas/Made-With-ML", "category": "MLOps" },
-  { "id": "graviraja/MLOps-Basics", "category": "MLOps" },
-  { "id": "openai/spinningup", "category": "Education" },
-  { "id": "dennybritz/reinforcement-learning", "category": "Education" },
-  { "id": "graykode/nlp-tutorial", "category": "Education" },
-  { "id": "AGI-Edgerunners/LLM-Agents-Papers", "category": "Foundations" },
-  { "id": "HandsOnLLM/Hands-On-Large-Language-Models", "category": "Education" },
-  { "id": "going-doer/Paper2Code", "category": "Projects" },
-  { "id": "jamwithai/production-agentic-rag-course", "category": "Education" },
-  { "id": "yangshun/tech-interview-handbook", "category": "Engineering" },
-  { "id": "systemdesign42/system-design-academy", "category": "Engineering" },
-  { "id": "public-apis/public-apis", "category": "Resources", "customDesc": "A collective list of free APIs." },
-  { "id": "EbookFoundation/free-programming-books", "category": "Resources" },
-  { "id": "x1xhlol/system-prompts-and-models-of-ai-tools", "category": "Resources" },
-  { "id": "bgauryy/open-docs", "category": "Resources", "customDesc": "Documentation created to better understand open projects." },
-  { "id": "cheahjs/free-llm-api-resources", "category": "Resources" },
-  { "id": "github/gh-aw", "category": "Engineering" },
-  { "id": "antfu/nuxt-mcp", "category": "Infrastructure", "customDesc": "Nuxt developer tools for route inspection and SSR debugging." },
-  { "id": "CoplayDev/unity-mcp", "category": "Infrastructure", "customDesc": "Interface with game engine APIs for AI-assisted game development." },
-  { "id": "MCPJam/inspector", "category": "Infrastructure", "customDesc": "Tool for testing and debugging MCP servers by inspecting protocol handshakes." },
-  { "id": "czlonkowski/n8n-mcp", "category": "Infrastructure", "customDesc": "Enhances n8n’s workflow automation by streamlining creation and orchestration." },
-  { "id": "Marktechpost/AI-Tutorial-Codes-Included", "category": "Projects", "customDesc": "Codes and Notebooks for AI Projects." },
-  { "id": "langchain-ai/langchain", "category": "Infrastructure" },
-  { "id": "Significant-Gravitas/Auto-GPT", "category": "Agents" },
-  { "id": "AUTOMATIC1111/stable-diffusion-webui", "category": "Models" },
-  { "id": "OpenBMB/MiniCPM-o", "category": "Models" },
-  { "id": "pydantic/monty", "category": "Agents" },
-  { "id": "GetStream/Vision-Agents", "category": "Agents" },
-  { "id": "hsliuping/TradingAgents-CN", "category": "Agents" },
-  { "id": "Jeffallan/claude-skills", "category": "Agents" },
-  { "id": "baserow/baserow", "category": "Infrastructure" },
-  { "id": "KeygraphHQ/shannon", "category": "Infrastructure" },
-  { "id": "iOfficeAI/AionUi", "category": "Infrastructure" },
-  { "id": "punkpeye/awesome-mcp-servers", "category": "Infrastructure" },
-  { "id": "gregorojstersek/resources-to-become-a-great-engineering-leader", "category": "Engineering" }
+  {
+    "id": "microsoft/generative-ai-for-beginners",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "microsoft/ai-agents-for-beginners",
+    "category": "Agentic Architecture",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "Microsoft/AI-For-Beginners",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "microsoft/ML-For-Beginners",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "dair-ai/Prompt-Engineering-Guide",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "dair-ai/Mathematics-for-ML",
+    "category": "Math",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "mlabonne/llm-course",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "Asabeneh/30-Days-Of-Python",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "Shubhamsaboo/awesome-llm-apps",
+    "category": "Projects",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "vchandu111/15-ai-projects",
+    "category": "Projects",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "kamranahmedse/developer-roadmap",
+    "category": "Roadmaps",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "Sumanth077/Hands-On-AI-Engineering",
+    "category": "Foundations",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "NirDiamant/GenAI_Agents",
+    "category": "Agentic Architecture",
+    "starter": true,
+    "level": "Beginner"
+  },
+  {
+    "id": "HeyNina101/generative_ai_project",
+    "category": "Foundations",
+    "customDesc": "A production-ready template to kickstart your Generative AI projects with structure and scalability in mind.",
+    "level": "Beginner"
+  },
+  {
+    "id": "ishandutta0098/orion",
+    "category": "Agentic Architecture",
+    "customDesc": "A smart multi-agent system to turn prompts into GitHub PRs.",
+    "level": "Beginner"
+  },
+  {
+    "id": "jlowin/fastmcp",
+    "category": "Infrastructure",
+    "customDesc": "The fast, Pythonic way to build MCP servers and clients.",
+    "level": "Beginner"
+  },
+  {
+    "id": "OpenBMB/ChatDev",
+    "category": "Agentic Architecture",
+    "customDesc": "Dev All through LLM-powered Multi-Agent Collaboration.",
+    "level": "Beginner"
+  },
+  {
+    "id": "ruc-datalab/DeepAnalyze",
+    "category": "Agentic Architecture",
+    "customDesc": "The first agentic LLM for autonomous data science.",
+    "level": "Beginner"
+  },
+  {
+    "id": "HKUDS/RAG-Anything",
+    "category": "Architecture",
+    "customDesc": "All-in-one Multimodal Document Processing RAG system built on LightRAG.",
+    "level": "Beginner"
+  },
+  {
+    "id": "tadata-org/fastapi_mcp",
+    "category": "Infrastructure",
+    "customDesc": "Expose secure FastAPI endpoints as MCP tools with minimal setup and authentication.",
+    "level": "Beginner"
+  },
+  {
+    "id": "instavm/coderunner",
+    "category": "Infrastructure",
+    "customDesc": "Turns LLMs into an instant execution partner that writes and runs code in a preconfigured sandbox.",
+    "level": "Beginner"
+  },
+  {
+    "id": "firecrawl/open-agent-builder",
+    "category": "Agentic Architecture",
+    "customDesc": "Visual workflow builder for AI agents powered by Firecrawl.",
+    "level": "Beginner"
+  },
+  {
+    "id": "microsoft/agent-lightning",
+    "category": "Agentic Architecture",
+    "customDesc": "The absolute trainer to light up AI agents.",
+    "level": "Beginner"
+  },
+  {
+    "id": "GoogleCloudPlatform/agent-starter-pack",
+    "category": "Foundations",
+    "customDesc": "Ship AI Agents to Google Cloud in minutes with built-in CI/CD and observability.",
+    "level": "Beginner"
+  },
+  {
+    "id": "oraios/serena",
+    "category": "Infrastructure",
+    "customDesc": "Semantic code editing and retrieval for agent-driven coding.",
+    "level": "Beginner"
+  },
+  {
+    "id": "steipete/Peekaboo",
+    "category": "Infrastructure",
+    "customDesc": "Swift code analysis that turns screen content into actionable AI context.",
+    "level": "Beginner"
+  },
+  {
+    "id": "upstash/context7",
+    "category": "Infrastructure",
+    "customDesc": "Pulls up-to-date, version-specific documentation straight from your code.",
+    "level": "Beginner"
+  },
+  {
+    "id": "ollama/ollama",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "langgenius/dify",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "NirDiamant/RAG_Techniques",
+    "category": "Architecture",
+    "level": "Beginner"
+  },
+  {
+    "id": "donnemartin/system-design-primer",
+    "category": "Engineering",
+    "level": "Beginner"
+  },
+  {
+    "id": "chiphuyen/dmls-book",
+    "category": "MLOps",
+    "level": "Beginner"
+  },
+  {
+    "id": "GokuMohandas/Made-With-ML",
+    "category": "MLOps",
+    "level": "Beginner"
+  },
+  {
+    "id": "graviraja/MLOps-Basics",
+    "category": "MLOps",
+    "level": "Beginner"
+  },
+  {
+    "id": "openai/spinningup",
+    "category": "Education",
+    "level": "Beginner"
+  },
+  {
+    "id": "dennybritz/reinforcement-learning",
+    "category": "Education",
+    "level": "Beginner"
+  },
+  {
+    "id": "graykode/nlp-tutorial",
+    "category": "Education",
+    "level": "Beginner"
+  },
+  {
+    "id": "AGI-Edgerunners/LLM-Agents-Papers",
+    "category": "Foundations",
+    "level": "Beginner"
+  },
+  {
+    "id": "HandsOnLLM/Hands-On-Large-Language-Models",
+    "category": "Education",
+    "level": "Beginner"
+  },
+  {
+    "id": "going-doer/Paper2Code",
+    "category": "Projects",
+    "level": "Beginner"
+  },
+  {
+    "id": "jamwithai/production-agentic-rag-course",
+    "category": "Education",
+    "level": "Beginner"
+  },
+  {
+    "id": "yangshun/tech-interview-handbook",
+    "category": "Engineering",
+    "level": "Beginner"
+  },
+  {
+    "id": "systemdesign42/system-design-academy",
+    "category": "Engineering",
+    "level": "Beginner"
+  },
+  {
+    "id": "public-apis/public-apis",
+    "category": "Resources",
+    "customDesc": "A collective list of free APIs.",
+    "level": "Beginner"
+  },
+  {
+    "id": "EbookFoundation/free-programming-books",
+    "category": "Resources",
+    "level": "Beginner"
+  },
+  {
+    "id": "x1xhlol/system-prompts-and-models-of-ai-tools",
+    "category": "Resources",
+    "level": "Beginner"
+  },
+  {
+    "id": "bgauryy/open-docs",
+    "category": "Resources",
+    "customDesc": "Documentation created to better understand open projects.",
+    "level": "Beginner"
+  },
+  {
+    "id": "cheahjs/free-llm-api-resources",
+    "category": "Resources",
+    "level": "Beginner"
+  },
+  {
+    "id": "github/gh-aw",
+    "category": "Engineering",
+    "level": "Beginner"
+  },
+  {
+    "id": "antfu/nuxt-mcp",
+    "category": "Infrastructure",
+    "customDesc": "Nuxt developer tools for route inspection and SSR debugging.",
+    "level": "Beginner"
+  },
+  {
+    "id": "CoplayDev/unity-mcp",
+    "category": "Infrastructure",
+    "customDesc": "Interface with game engine APIs for AI-assisted game development.",
+    "level": "Beginner"
+  },
+  {
+    "id": "MCPJam/inspector",
+    "category": "Infrastructure",
+    "customDesc": "Tool for testing and debugging MCP servers by inspecting protocol handshakes.",
+    "level": "Beginner"
+  },
+  {
+    "id": "czlonkowski/n8n-mcp",
+    "category": "Infrastructure",
+    "customDesc": "Enhances n8n’s workflow automation by streamlining creation and orchestration.",
+    "level": "Beginner"
+  },
+  {
+    "id": "Marktechpost/AI-Tutorial-Codes-Included",
+    "category": "Projects",
+    "customDesc": "Codes and Notebooks for AI Projects.",
+    "level": "Beginner"
+  },
+  {
+    "id": "langchain-ai/langchain",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "Significant-Gravitas/Auto-GPT",
+    "category": "Agents",
+    "level": "Beginner"
+  },
+  {
+    "id": "AUTOMATIC1111/stable-diffusion-webui",
+    "category": "Models",
+    "level": "Beginner"
+  },
+  {
+    "id": "OpenBMB/MiniCPM-o",
+    "category": "Models",
+    "level": "Beginner"
+  },
+  {
+    "id": "pydantic/monty",
+    "category": "Agents",
+    "level": "Beginner"
+  },
+  {
+    "id": "GetStream/Vision-Agents",
+    "category": "Agents",
+    "level": "Beginner"
+  },
+  {
+    "id": "hsliuping/TradingAgents-CN",
+    "category": "Agents",
+    "level": "Beginner"
+  },
+  {
+    "id": "Jeffallan/claude-skills",
+    "category": "Agents",
+    "level": "Beginner"
+  },
+  {
+    "id": "baserow/baserow",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "KeygraphHQ/shannon",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "iOfficeAI/AionUi",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "punkpeye/awesome-mcp-servers",
+    "category": "Infrastructure",
+    "level": "Beginner"
+  },
+  {
+    "id": "gregorojstersek/resources-to-become-a-great-engineering-leader",
+    "category": "Engineering",
+    "level": "Beginner"
+  }
 ]

@@ -1,0 +1,46 @@
+name: "💎 Submit a new AI Gem"
+description: Suggest a repository, course, or resource for the AetherIndex Foundry.
+title: "[SUBMISSION]: <Title of Resource>"
+labels: ["community-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to the Lifesaver project! Please fill out the details below.
+  - type: input
+    id: url
+    attributes:
+      label: Resource URL
+      placeholder: "https://github.com/user/repo or https://youtube.com/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Foundry Sector
+      options:
+        - Foundations
+        - Agentic Architecture
+        - Math
+        - Infrastructure
+        - Projects
+        - MLOps
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Difficulty Level
+      options:
+        - Beginner
+        - Intermediate
+        - Advanced
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short Description
+      placeholder: "Explain why this is a lifesaver for newbies..."
+    validations:
+      required: true
