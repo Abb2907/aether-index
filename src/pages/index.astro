@@ -3,9 +3,9 @@ import reposData from '../data/repos.json';
 import mediaData from '../data/media.json';
 import '../styles/global.css';
 
-const categories = ["All", ...new Set([...reposData.map(r => r.category), ...mediaData.map(m => m.category)])];
+const categories = ["All", "Foundations", "Agentic Architecture", "Math", "Infrastructure", "Projects", "MLOps"];
 
-// Enhanced Fetch Logic with Level Support
+// Unified Resource Logic
 const repos = await Promise.all(reposData.map(async (repo) => {
   try {
     const res = await fetch(`https://api.github.com/repos/${repo.id}`, {
@@ -15,31 +15,26 @@ const repos = await Promise.all(reposData.map(async (repo) => {
     return {
       id: repo.id,
       name: data.name || repo.id.split('/')[1],
-      desc: repo.customDesc || data.description || "Essential AI resource.",
+      desc: repo.customDesc || data.description || "Essential AI logic.",
       stars: data.stargazers_count ? (data.stargazers_count / 1000).toFixed(1) + 'k' : '0.0k',
       url: data.html_url,
       category: repo.category,
       level: repo.level || "Beginner",
-      type: "Code",
-      isStarter: repo.starter || false,
-      tags: repo.tags || []
+      type: "GitHub",
+      isStarter: repo.starter || false
     };
   } catch (e) {
-    return { id: repo.id, name: repo.id, desc: "Source link", stars: "—", url: `https://github.com/${repo.id}`, category: repo.category, type: "Code", level: repo.level || "Beginner", isStarter: repo.starter || false, tags: [] };
+    return { id: repo.id, name: repo.id, desc: "Source link", stars: "—", url: `https://github.com/${repo.id}`, category: repo.category, type: "GitHub", level: repo.level || "Beginner", isStarter: repo.starter || false };
   }
 }));
 
-const allGems = [
-  ...repos, 
-  ...mediaData.map(m => ({ 
-    ...m, 
-    id: m.url, 
-    name: m.title, 
-    stars: m.type, 
-    type: "Media", 
-    isStarter: m.starter || false,
-    tags: m.tags || []
-  }))
+const allGems = [...repos, ...mediaData.map(m => ({ ...m, id: m.url, name: m.title, stars: m.type, type: m.type, isStarter: m.starter || false }))];
+
+const paths = [
+  { name: "Beginner", duration: "4-8 Weeks", resources: "45 Items", icon: "🌱", items: ["Python Programming", "Math for ML", "Linear Algebra"] },
+  { name: "Intermediate", duration: "8-16 Weeks", resources: "60 Items", icon: "⚙️", items: ["Deep Learning", "PyTorch/TensorFlow", "Transformers"] },
+  { name: "Advanced", duration: "12-24 Weeks", resources: "80 Items", icon: "🧠", items: ["LLM Fine-tuning", "RAG Systems", "AI Agents"] },
+  { name: "Frontier", duration: "Ongoing", resources: "30 Items", icon: "🌌", items: ["Research Papers", "Scaling Laws", "Multimodal"] }
 ];
 ---
 
@@ -48,244 +43,163 @@ const allGems = [
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<title>AetherIndex // The AI Mastery Foundry</title>
-
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://aether-index.vercel.app/" />
-		<meta property="og:title" content="AetherIndex // The AI Beginner's Foundry" />
-		<meta property="og:description" content="A curated lifesaver for new developers. 100+ elite AI repositories, Stanford/Harvard courses, and technical roadmaps." />
-		<meta property="og:image" content="https://aether-index.vercel.app/og_image.png" />
+		<title>AetherIndex // The Ultimate AI Foundry</title>
 	</head>
-	<body class="bg-[#02040a] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
-		
-		<div class="fixed inset-0 bg-[radial-gradient(circle_at_50%_-20%,#1e1b4b,transparent)] pointer-events-none -z-10"></div>
+	<body class="bg-[#02040a] text-slate-200 antialiased selection:bg-blue-500/40">
+		<div class="bg-cyber-glow"></div>
 
-		<nav class="border-b border-white/5 bg-black/60 backdrop-blur-xl sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-				<div class="flex items-center gap-3">
-					<div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse shadow-[0_0_10px_#3b82f6]"></div>
-					<span class="font-bold tracking-tighter uppercase italic text-lg text-white">Aether<span class="text-blue-500">Index</span></span>
+		<nav class="sticky top-0 z-50 border-b border-white/5 bg-black/40 backdrop-blur-xl">
+			<div class="max-w-[1440px] mx-auto px-8 h-20 flex items-center justify-between">
+				<div class="flex items-center gap-4">
+					<div class="w-2.5 h-2.5 bg-blue-500 rounded-full animate-pulse shadow-[0_0_12px_#3b82f6]"></div>
+					<span class="font-bold tracking-tighter uppercase italic text-xl text-white">AI Aether <span class="text-blue-500">Index</span></span>
 				</div>
-				<div class="flex items-center gap-6">
-					<a href="/getting-started" class="text-[10px] font-mono uppercase tracking-[0.2em] text-blue-400 hover:text-white transition-all">
-						Identity_Protocol →
-					</a>
-					<a 
-						href="https://github.com/abhisek-padhy/aether-index/issues/new?template=submit-gem.yml" 
-						target="_blank"
-						class="hidden md:block bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-4 py-2 uppercase tracking-tight rounded-full transition-all shadow-lg shadow-blue-900/20"
-					>
-						Submit Gem
-					</a>
-					<button id="show-favs" class="text-[10px] font-mono uppercase tracking-widest text-slate-400 hover:text-yellow-500 transition-colors">
-						Archive_Log (<span id="fav-count">0</span>)
+				<div class="flex items-center gap-8">
+					<div class="hidden lg:flex gap-6 mono-tag text-slate-500">
+						<a href="#paths" class="hover:text-blue-400 transition-all">Learning_Paths</a>
+						<a href="#foundry" class="hover:text-blue-400 transition-all">The_Foundry</a>
+						<a href="#community" class="hover:text-blue-400 transition-all">Community</a>
+					</div>
+					<button class="bg-white/5 border border-white/10 px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
+						Sign_In (Google)
 					</button>
 				</div>
 			</div>
 		</nav>
 
-		<header class="max-w-7xl mx-auto px-6 pt-24 pb-12">
-			<div class="max-w-3xl">
-				<div class="inline-block px-3 py-1 border border-blue-500/30 rounded-full bg-blue-500/5 text-[9px] font-mono text-blue-400 uppercase tracking-[0.3em] mb-8 animate-fade-in">
-					The_Beginner_Lifesaver_v2.0
-				</div>
-				<h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.85] uppercase italic">
-					Zero to Master:<br/><span class="text-blue-500">The Foundry.</span>
-				</h1>
-				<p class="text-xl text-slate-400 font-light leading-relaxed mb-12 italic border-l-2 border-white/10 pl-6">
-					Your curated command center for actual hands-on playing with the world's most vital <span class="text-white">AI Gems</span>.
-				</p>
+		<header class="max-w-7xl mx-auto px-8 pt-32 pb-20 text-center">
+			<h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 uppercase italic text-white leading-none">
+				Forge Your Master<br/><span class="text-blue-500">Artificial Intelligence.</span>
+			</h1>
+			<p class="mono-tag text-slate-500 text-lg mb-12">"Forge Your Master Artificial Intelligence" — The Ultimate Foundry v2.0</p>
+			
+			<div class="max-w-2xl mx-auto relative group">
+				<input type="text" id="gem-search" placeholder="Execute Search (e.g. 'RAG', 'Agent', 'Math')..." class="w-full bg-white/[0.02] border border-white/10 rounded-3xl px-8 py-6 text-sm font-mono text-white focus:border-blue-500/50 focus:bg-white/[0.04] transition-all outline-none" />
+				<div class="absolute right-6 top-1/2 -translate-y-1/2 mono-tag text-slate-600 hidden md:block">Cmd_K_Interface</div>
 			</div>
 		</header>
 
-		<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-16 pb-24">
-			<aside class="w-full md:w-64 flex-shrink-0">
-				<div class="sticky top-28">
-					<h3 class="text-[10px] font-mono uppercase tracking-[0.25em] text-slate-500 mb-6">Mastery_Sectors</h3>
-					<nav class="flex flex-col gap-1">
-						{categories.map(cat => (
-							<button class="cat-btn text-left px-4 py-3 rounded-xl border border-transparent text-xs font-medium text-slate-400 hover:bg-white/5 hover:text-white transition-all flex items-center justify-between group" data-category={cat}>
-								{cat}
-								<span class="opacity-0 group-hover:opacity-100 transition-all text-blue-500 translate-x-[-10px] group-hover:translate-x-0">→</span>
+		<section id="paths" class="max-w-7xl mx-auto px-8 py-24 border-t border-white/5">
+			<div class="flex justify-between items-end mb-16">
+				<div>
+					<h3 class="mono-tag text-blue-400 mb-2 italic">Chronological_Sequence</h3>
+					<h2 class="text-4xl font-bold text-white uppercase italic">Learning Paths</h2>
+				</div>
+				<p class="text-[10px] mono-tag text-slate-600">Total_Resources: 215 Items</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				{paths.map(path => (
+					<div class="laser-card p-8 border border-white/5 bg-white/[0.01]">
+						<div class="text-3xl mb-6">{path.icon}</div>
+						<h3 class="text-xl font-bold text-white mb-1 italic uppercase">{path.name}</h3>
+						<p class="text-[10px] mono-tag text-blue-400 mb-6">{path.duration} // {path.resources}</p>
+						<ul class="space-y-3 mb-8">
+							{path.items.map(item => (
+								<li class="text-xs text-slate-500 flex items-center gap-2">
+									<span class="w-1 h-1 bg-slate-700 rounded-full"></span> {item}
+								</li>
+							))}
+						</ul>
+						<button class="w-full py-3 rounded-xl border border-white/10 text-[9px] mono-tag hover:bg-blue-600 hover:border-blue-600 transition-all">Initialize_Path</button>
+					</div>
+				))}
+			</div>
+		</section>
+
+		<div id="foundry" class="max-w-[1440px] mx-auto px-8 flex flex-col lg:flex-row gap-16 py-32 border-t border-white/5">
+			<aside class="w-full lg:w-72 flex-shrink-0">
+				<div class="sticky top-32">
+					<h3 class="mono-tag text-slate-500 mb-8">Filter_Foundry</h3>
+					<div class="flex flex-col gap-1">
+						{categories.map((cat, i) => (
+							<button class={`sector-btn group ${i === 0 ? 'active' : ''}`} data-category={cat}>
+								<span class="flex items-center justify-between w-full">
+									{cat}
+									<span class="opacity-0 group-hover:opacity-100 transition-all text-blue-500">→</span>
+								</span>
 							</button>
 						))}
-					</nav>
-					
-					<div class="mt-12 p-6 rounded-2xl border border-blue-500/10 bg-blue-500/5 backdrop-blur-sm">
-						<h4 class="text-[10px] font-mono uppercase text-blue-400 mb-3 italic underline">Newbie Path</h4>
-						<p class="text-[11px] text-slate-400 leading-relaxed italic">Start with <span class="text-white italic">Foundations</span> and follow the yellow pulses.</p>
+					</div>
+
+					<div class="mt-20">
+						<h3 class="mono-tag text-slate-500 mb-6">Badges_Unlocked</h3>
+						<div class="space-y-4">
+							<div class="flex items-center gap-4 group cursor-help">
+								<div class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center bg-white/5 group-hover:border-blue-500 transition-all">🌱</div>
+								<div>
+									<p class="text-[10px] font-bold text-white uppercase italic">ML Initiate</p>
+									<p class="text-[8px] mono-tag text-slate-600">1 Resource</p>
+								</div>
+							</div>
+							<div class="flex items-center gap-4 opacity-30 grayscale">
+								<div class="w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center bg-white/5">⚒️</div>
+								<div>
+									<p class="text-[10px] font-bold text-white uppercase italic">LLM Architect</p>
+									<p class="text-[8px] mono-tag text-slate-600">30 Resources</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</aside>
 
-			<main class="flex-1">
-				<div class="mb-12 relative group">
-					<input 
-						type="text" 
-						id="gem-search" 
-						placeholder="Execute Search (e.g. 'Agents', 'Math', 'Karpathy')..." 
-						class="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5 text-sm font-mono text-white focus:border-blue-500/50 focus:bg-white/[0.05] transition-all outline-none" 
-					/>
-					<div class="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-600 hidden md:block">SEARCH_QUERY_INIT</div>
-				</div>
-
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="foundry-grid">
+			<div class="flex-1">
+				<div class="grid grid-cols-1 xl:grid-cols-2 gap-8" id="foundry-grid">
 					{allGems.map(gem => (
-						<div class="laser-card p-10 group relative flex flex-col justify-between h-full bg-white/[0.02] border border-white/5 rounded-[32px] transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)]" 
-							 data-category={gem.category} 
-							 data-type={gem.type} 
-							 data-id={gem.id} 
-							 data-name={gem.name.toLowerCase()}
-							 data-tags={gem.tags?.join(' ')}>
-							
+						<div class="laser-card p-10 group relative flex flex-col justify-between" data-category={gem.category} data-name={gem.name.toLowerCase()}>
 							<div>
-								<div class="flex justify-between items-start mb-8">
+								<div class="flex justify-between items-start mb-10">
 									<div class="flex flex-col gap-3">
-										<div class="flex gap-2 items-center">
-											<span class={`text-[8px] font-mono uppercase tracking-widest px-2 py-0.5 rounded border ${
-												gem.level === 'Advanced' ? 'border-red-500/40 text-red-400 bg-red-500/5' : 
-												gem.level === 'Intermediate' ? 'border-blue-500/40 text-blue-400 bg-blue-500/5' : 
-												'border-green-500/40 text-green-400 bg-green-500/5'
-											}`}>
-												{gem.level || 'Beginner'}
-											</span>
-											{gem.isStarter && (
-												<span class="w-1.5 h-1.5 bg-yellow-500 rounded-full animate-ping shadow-[0_0_8px_#eab308]"></span>
-											)}
-										</div>
-										<span class="text-[10px] font-mono text-blue-400/60 uppercase tracking-[0.2em]">{gem.category}</span>
+										<span class={`text-[8px] mono-tag px-2.5 py-1 rounded-lg border ${
+											gem.level === 'Advanced' ? 'border-red-500/40 text-red-400' : 
+											'border-green-500/40 text-green-400'
+										}`}>
+											{gem.level}
+										</span>
+										<span class="mono-tag text-blue-400/50">{gem.category}</span>
 									</div>
-									<button class="fav-btn p-2 text-slate-700 hover:text-yellow-500 transition-all active:scale-90" data-id={gem.id}>
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
-									</button>
+									<div class="text-[10px] mono-tag text-slate-700 bg-white/5 px-3 py-1 rounded-full uppercase italic">{gem.type}</div>
 								</div>
-								
-								<h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-4 tracking-tight uppercase italic leading-tight">
-									{gem.name}
-								</h3>
-								<p class="text-sm text-slate-500 leading-relaxed font-light italic line-clamp-3 mb-10 group-hover:text-slate-300 transition-colors">
-									{gem.desc}
-								</p>
+								<h3 class="text-3xl font-bold text-white group-hover:text-blue-400 transition-colors mb-4 tracking-tight uppercase italic leading-none">{gem.name}</h3>
+								<p class="text-sm text-slate-500 leading-relaxed font-light italic line-clamp-3 mb-12">{gem.desc}</p>
 							</div>
-							
-							<div class="pt-6 border-t border-white/5 flex items-center justify-between">
-								<a href={gem.url} target="_blank" class="group/link flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all">
-									Initialize_Gem 
+							<div class="pt-8 border-t border-white/5 flex items-center justify-between">
+								<a href={gem.url} target="_blank" class="flex items-center gap-3 mono-tag text-slate-500 hover:text-white transition-all group/link">
+									Initialize_Gem
 									<span class="group-hover/link:translate-x-1 transition-transform">→</span>
 								</a>
-								<div class="text-[9px] text-slate-700 font-mono uppercase tracking-widest">{gem.stars}</div>
+								<div class="mono-tag text-slate-700 italic">{gem.stars}</div>
 							</div>
 						</div>
 					))}
 				</div>
-			</main>
+			</div>
 		</div>
 
-		<footer class="mt-40 border-t border-white/5 py-24 bg-[#010206] text-center">
-			<div class="font-bold tracking-tighter uppercase italic text-2xl mb-4 text-white">Aether<span class="text-blue-500">Index</span></div>
-			<p class="text-[10px] text-slate-600 font-mono uppercase tracking-[0.5em] mb-12">From scratch to AI Mastery.</p>
-			<div class="flex justify-center gap-10 text-[10px] font-mono uppercase tracking-widest text-slate-800">
-				<a href="#" class="hover:text-blue-400 transition-colors">Privacy_Protocol</a>
-				<a href="#" class="hover:text-blue-400 transition-colors">Archive_Log</a>
-				<a href="#" class="hover:text-blue-400 transition-colors">Terminal_Access</a>
+		<section id="community" class="max-w-7xl mx-auto px-8 py-32 border-t border-white/5">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+				<div>
+					<h2 class="text-5xl font-black italic uppercase text-white mb-8">Join the <span class="text-blue-500">Commune.</span></h2>
+					<p class="text-slate-400 italic mb-12 max-w-md leading-relaxed">Paper reviews, project showcases, and a direct line to the frontier. Forge with us.</p>
+					<div class="flex gap-6">
+						<a href="#" class="bg-[#5865F2] px-8 py-4 rounded-2xl font-bold uppercase text-[10px] tracking-widest hover:scale-105 transition-all">Discord_Access</a>
+						<a href="#" class="bg-white/5 border border-white/10 px-8 py-4 rounded-2xl font-bold uppercase text-[10px] tracking-widest hover:bg-white/10 transition-all">LinkedIn_Sync</a>
+					</div>
+				</div>
+				<div class="p-12 rounded-[3rem] bg-blue-600/5 border border-blue-500/20 backdrop-blur-xl">
+					<h3 class="text-2xl font-bold italic uppercase text-white mb-4">Weekly_Spotlight</h3>
+					<p class="text-slate-400 text-sm mb-10">Curated papers, tool reviews, and roadmap updates. Direct to your terminal.</p>
+					<div class="flex flex-col sm:flex-row gap-3">
+						<input type="email" placeholder="ENTER_EMAIL_ADDR" class="flex-1 bg-black/40 border border-white/10 rounded-2xl px-6 py-4 text-xs font-mono outline-none focus:border-blue-500 transition-all" />
+						<button class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold uppercase text-[10px] tracking-widest hover:bg-blue-500 transition-all">Subscribe</button>
+					</div>
+				</div>
 			</div>
+		</section>
+
+		<footer class="py-20 border-t border-white/5 text-center">
+			<p class="mono-tag text-slate-700 italic">© 2026 Aether Index // Built for AI learners everywhere</p>
 		</footer>
-
-		<script>
-			// --- SEARCH & FILTER LOGIC ---
-			const searchInput = document.getElementById('gem-search') as HTMLInputElement;
-			const catButtons = document.querySelectorAll('.cat-btn');
-			const cards = document.querySelectorAll('.laser-card') as NodeListOf<HTMLElement>;
-			let currentCat = "All";
-
-			function filterGems() {
-				const query = searchInput.value.toLowerCase().trim();
-				const keywords = query.split(/\s+/);
-
-				cards.forEach(card => {
-					const name = card.getAttribute('data-name') || "";
-					const cat = card.getAttribute('data-category') || "";
-					const tags = card.getAttribute('data-tags')?.toLowerCase() || "";
-					const desc = card.querySelector('p')?.innerText.toLowerCase() || "";
-
-					const content = `${name} ${cat} ${tags} ${desc}`;
-					const isMatch = keywords.every(word => content.includes(word));
-					const matchesCat = currentCat === "All" || cat === currentCat;
-
-					card.style.display = (isMatch && matchesCat) ? 'flex' : 'none';
-				});
-			}
-
-			catButtons.forEach(btn => {
-				btn.addEventListener('click', () => {
-					catButtons.forEach(b => b.classList.remove('bg-white/5', 'text-white'));
-					btn.classList.add('bg-white/5', 'text-white');
-					currentCat = btn.getAttribute('data-category') || "All";
-					filterGems();
-				});
-			});
-
-			searchInput?.addEventListener('input', filterGems);
-
-			// --- BOOKMARK LOGIC ---
-			const favButtons = document.querySelectorAll('.fav-btn');
-			const favCountDisplay = document.getElementById('fav-count');
-			const showFavsBtn = document.getElementById('show-favs');
-
-			function getFavorites() {
-				return JSON.parse(localStorage.getItem('aether_bookmarks') || '[]');
-			}
-
-			function updateUI() {
-				const favs = getFavorites();
-				if (favCountDisplay) favCountDisplay.innerText = favs.length;
-				
-				favButtons.forEach(btn => {
-					const id = btn.getAttribute('data-id');
-					const svg = btn.querySelector('svg');
-					if (id && favs.includes(id)) {
-						svg?.setAttribute('fill', '#eab308');
-						btn.classList.add('text-yellow-500');
-					} else {
-						svg?.setAttribute('fill', 'none');
-						btn.classList.remove('text-yellow-500');
-					}
-				});
-			}
-
-			favButtons.forEach(btn => {
-				btn.addEventListener('click', () => {
-					const id = btn.getAttribute('data-id');
-					let favs = getFavorites();
-					if (id) {
-						if (favs.includes(id)) {
-							favs = favs.filter((f: string) => f !== id);
-						} else {
-							favs.push(id);
-						}
-						localStorage.setItem('aether_bookmarks', JSON.stringify(favs));
-						updateUI();
-					}
-				});
-			});
-
-			let showingFavs = false;
-			showFavsBtn?.addEventListener('click', () => {
-				showingFavs = !showingFavs;
-				const favs = getFavorites();
-				cards.forEach(card => {
-					const id = card.getAttribute('data-id');
-					if (showingFavs) {
-						card.style.display = (id && favs.includes(id)) ? 'flex' : 'none';
-						showFavsBtn.classList.add('text-yellow-500');
-					} else {
-						card.style.display = 'flex';
-						showFavsBtn.classList.remove('text-yellow-500');
-					}
-				});
-			});
-
-			updateUI();
-		</script>
 	</body>
 </html>
